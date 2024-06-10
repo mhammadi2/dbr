@@ -1,18 +1,18 @@
 //Navbar.Mb
 import { useState } from 'react'
-import { Menu, Sidebar, Image } from 'semantic-ui-react'
+import { Menu, Sidebar, Image, Container} from 'semantic-ui-react'
 function Overlay() {
   return (
     <div style={{
       backgroundColor: "rgba(0, 0, 0, 0.795)",
       position: "fixed",
       height: "110vh",
-      // width:,
+      width:'thin'
     }} />
   )
 }
 function HamIcon() {
-  return (<i className="big bars icon inverted" />)
+  return (<i className="big bars icon " />)
 }
 function CloseIcon() {
   return (<i className="big close red icon" />)
@@ -34,13 +34,16 @@ function NavbarMb({renderLinks}) {
   return (
     <>
       {visible && <Overlay />}
+      <Container fluid>
+
       <Menu
-       inverted
+      //  inverted
         size="tiny"
         borderless
         attached
         // stackable
         visible={visible}
+      
        
       >
         <Menu.Item>
@@ -53,20 +56,21 @@ function NavbarMb({renderLinks}) {
             circular
           />
         </Menu.Item>
-        <Menu.Menu position='right'  visible={visible}>
+        <Menu.Menu    visible={visible}>
           <Menu.Item onClick={toggleSidebar}>
             {icon }
           </Menu.Item>
         </Menu.Menu>
       </Menu>
+      </Container>
       <Sidebar as={Menu}
         animation='overlay'
         icon='labeled' 
-        inverted
+        // inverted
         vertical
         visible={visible}
         width='thin'
-        onClick={toggleSidebar}
+        onClick={toggleSidebar} 
       >
       {renderLinks()}
       </Sidebar>
