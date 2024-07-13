@@ -3,6 +3,8 @@ import { createMedia } from '@artsy/fresnel'
 import PropTypes from 'prop-types'
 import  { Component } from 'react'
 import { InView } from 'react-intersection-observer'
+
+
 import {
   Button,
   Container,
@@ -16,6 +18,7 @@ import {
   Segment,
   Sidebar,
 } from 'semantic-ui-react'
+import SwiperBanner from '../../layout/swiper/SwiperBanner'
 
 const { MediaContextProvider, Media } = createMedia({
   breakpoints: {
@@ -68,7 +71,7 @@ class DesktopContainer extends Component {
 
     return (
       <Media greaterThan='mobile'>
-        <InView onChange={this.toggleFixedMenu}>
+        {/* <InView onChange={this.toggleFixedMenu}>
           <Segment
             inverted
             textAlign='center'
@@ -78,7 +81,7 @@ class DesktopContainer extends Component {
           >
             <HomepageBanner />
           </Segment>
-        </InView>
+        </InView> */}
 
         {children}
       </Media>
@@ -140,33 +143,31 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-// const HomepageLayout = () => (
 const Homepage = () => (
   <ResponsiveContainer>
-    <Segment>
+    <SwiperBanner/>
+    {/* <Segment clearing>
       <h1>Space for Swiper</h1>
-    </Segment>
+      </Segment> */}
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
-          <Grid.Column width={8}>
+          <Grid.Column width={10}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
+              We Help Chip Design & Application
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
+              Developed, design and support your chip design needs.
             </p>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
+              We Understand Issues 
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
+              With our working experience, we can provide a better solution in the field of Analog, RF and Mixed Signal Design.
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            <Image bordered rounded size='large' src='/ota_modified.png' />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -182,17 +183,18 @@ const Homepage = () => (
         <Grid.Row textAlign='center'>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "What a Company"
+              Debugr4 as a 
             </Header>
-            <p style={{ fontSize: '1.33em' }}>That is what they all say about us</p>
+            <p style={{ fontSize: '1.33em' }}>Leading supplier of high power and 
+              performance power converter solutions for medical, 
+              transportation and home automation</p>
           </Grid.Column>
           <Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              "I shouldn't have gone with their competitor."
+              Debugr4 as a
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
+            <p style={{ fontSize: '1.33em' }}>Design and Layout solutions for Analog, RF and Mixed signal Chips</p>
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -202,12 +204,10 @@ const Homepage = () => (
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Container text>
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Breaking The Grid, Grabs Your Attention
+          Chip Design, Develop and Characterization.
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          Instead of focusing on content creation and hard work, we have learned how to master the
-          art of doing nothing by providing massive amounts of whitespace and generic content that
-          can seem massive, monolithic and worth your attention.
+           we have learned how to master Analog, RF and Mixed signal desgin.
         </p>
         <Button as='a' size='large'>
           Read More
@@ -219,19 +219,35 @@ const Homepage = () => (
           horizontal
           style={{ margin: '3em 0em', textTransform: 'uppercase' }}
         >
-          <a href='#'>Case Studies</a>
+          <a href='#'>Our Works</a>
         </Divider>
 
         <Header as='h3' style={{ fontSize: '2em' }}>
-          Did We Tell You About Our Bananas?
+          Analog Op-Amp Design
         </Header>
         <p style={{ fontSize: '1.33em' }}>
-          Yes I know you probably disregarded the earlier boasts as non-sequitur filler content, but
-          it's really true. It took years of gene splicing and combinatory DNA research, but our
-          bananas can really dance.
+          We are master in Differential, voltage,current mode Op Amps.
+        </p>
+        <Header as='h3' style={{ fontSize: '2em' }}>
+          LDO Design
+        </Header>
+        <p style={{ fontSize: '1.33em' }}>
+          We are master in LDOS.
+        </p>
+        <Header as='h3' style={{ fontSize: '2em' }}>
+          Switcher
+        </Header>
+        <p style={{ fontSize: '1.33em' }}>
+          We are master in Switcher.
+        </p>
+        <Header as='h3' style={{ fontSize: '2em' }}>
+          RF Switch
+        </Header>
+        <p style={{ fontSize: '1.33em' }}>
+          We are master in RF Switch.
         </p>
         <Button as='a' size='large'>
-          I'm Still Quite Interested
+          See All interesting thing.
         </Button>
       </Container>
     </Segment>
@@ -241,4 +257,3 @@ const Homepage = () => (
 )
 
 export default Homepage
-// export default HomepageLayout

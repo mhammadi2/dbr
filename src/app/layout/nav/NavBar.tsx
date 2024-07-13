@@ -20,7 +20,7 @@ import { NavLink } from "react-router-dom";
 // import SignedOutButton from "./SignedOutButton";
 
 export default function Navbar() {
-  const [visible, setVisible] = useState(false);
+  // const [visible, setVisible] = useState(false);
   // const { authenticated } = useAppSelector((state) => state.auth);
   const [activeItem, setactiveItem] = useState("home");
   const handleItemClick = (e, { name }) => {
@@ -100,7 +100,7 @@ export default function Navbar() {
               // visible={visible}
             />
             <Menu.Item
-              name="Contact"
+              name="Contact Us"
               active={activeItem === "contact"}
               onClick={handleItemClick}
               position="right"
