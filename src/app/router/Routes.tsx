@@ -7,6 +7,7 @@ import Contact from "../features/contact/Contact";
 import AnalogIc from "../features/analogic/AnalogIc";
 import Layoutic from "../features/layoutic/Layoutic";
 import Mixedic from "../features/mixedic/Mixedic";
+import Patent from "../features/patent/Patent";
 
 // import Scratch from "../features/scratch/Scratch";
 // import ProfilePage from "../features/profiles/ProfilePage";
@@ -27,7 +28,7 @@ export const router =createBrowserRouter([
             {path: '/analogic', element: <AnalogIc />},
             {path: '/layoutic', element: <Layoutic />},
             {path: '/mixedic', element: <Mixedic />},
-            // {path: '/scratch', element:<Scratch/>},
+            {path: '/patent', element:<Patent/>},
             // {path: '/profiles/:id', element:<ProfilePage/>},
             // Needs to add profile item in signedinMenu
 

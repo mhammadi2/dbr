@@ -41,10 +41,10 @@ function NavbarMb({renderLinks}) {
         size="tiny"
         borderless
         attached
-        // stackable
+        stackable
+        vertical
         visible={visible}
-      
-       
+
       >
         <Menu.Item>
           {/* <img src="profile.png" width="35px" height="35px" alt="" />
@@ -67,12 +67,12 @@ function NavbarMb({renderLinks}) {
         animation='overlay'
         icon='labeled' 
         // inverted
-        vertical
+        stacable
         visible={visible}
-        width='thin'
+        width='large'
         onClick={toggleSidebar} 
       >
-      {renderLinks()}
+      {renderLinks(true)}
       </Sidebar>
     </>
   )
